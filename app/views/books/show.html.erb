@@ -25,7 +25,7 @@
                <%= link_to "Edit", edit_book_path(@book.id), class: "btn btn-sm btn-success" %>
              </td>
              <td>
-               <%= link_to "Delete",books_path, method: :delete, class: "btn btn-sm btn-danger" %>
+               <%= link_to "Delete",book_path(@book.id), method: :delete, class: "btn btn-sm btn-danger" %>
              </td>
          </tr>
        </tbody>
