@@ -1,9 +1,9 @@
 class Book < ApplicationRecord
   has_one_attached :profile_image
   belongs_to :user
-  
+
   validates :title, presence: true
-  validates :body, presence: true
+  validates :body, presence: true, length: {maximum: 200} #空でない、かつ最大200文字までに設定
 
 
   def get_profile_image
