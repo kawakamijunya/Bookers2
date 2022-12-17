@@ -7,8 +7,8 @@ class User < ApplicationRecord
   has_many :books,dependent: :destroy
 
   has_one_attached :profile_image
-  
-  validates :name, presence: true, uniqueness: true, length: {minimum: 2, maximum: 20} #空でない、一意性を持たせ、かつ2～20文字の範囲で設定
+
+  validates :name, uniqueness: true, length: {minimum: 2, maximum: 20} #空でない、一意性を持たせ、かつ2～20文字の範囲で設定
   validates :introduction, length: {maximum: 50} #最大50文字までに設定
 
   def get_profile_image(width,height)
